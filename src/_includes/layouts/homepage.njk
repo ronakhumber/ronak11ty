@@ -1,0 +1,21 @@
+{% extends "base.njk" %}
+
+{% block homecontent %}
+
+<section class="homepage">
+    <div>
+        {{content | safe}}
+    </div>
+        <img class="display-picture" src="/assets/img/dp.jpg">
+    <ul>
+    <h1> Blog Posts</h1>
+    <div id="related_links">
+    {%- for blog in collections.blog -%}
+    <li><a href="{{blog.url}}">{{ blog.data.title }}</a></li>
+    {%- endfor -%}
+    </div>
+    
+    </ul>
+</section>
+
+{% endblock homecontent %}

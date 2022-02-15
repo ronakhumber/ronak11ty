@@ -1,0 +1,12 @@
+{% extends "base.njk" %}
+
+{% block postcontent %}
+
+<img class="center-image" src="/assets/img/{{ image }}"/>
+
+<section class="post">
+    <div>
+        {{content | safe}}
+    </div>
+</section>
+{% endblock postcontent %}
